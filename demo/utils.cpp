@@ -261,3 +261,21 @@ vector<vector<int>> ConvertSentenceToLabels(wstring text) {
     }
     return res;
 }
+
+void saveToWav(vector<float> infer, string savePath) {
+    // Convert to WAVE
+    const float* audio = infer.data();
+    uint64_t length = infer.size();
+    auto result = ConvertToWave(audio, length, 22050);
+
+    // Save to WAV
+    ofstream file(savePath, ios::out | ios::binary);
+
+    // 检查文件是否打开成功
+    if (file) {
+      file.write(reinterpret_cast<const char*>(result.data()), result.size());
+      file.close();
+    } else {
+      wcerr << L"无法打开文件" << endl;
+    }
+}

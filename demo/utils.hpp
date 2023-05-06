@@ -28,4 +28,6 @@ wstring JapaneseCleanText2(wstring text);
 vector<int> WordsToLabels(wstring text, int cleanerType);
 vector<vector<int>> ConvertSentenceToLabels(wstring text);
 
+void saveToWav(vector<float> infer, string savePath);
+
 #endif

@@ -38,18 +38,19 @@ The project is forked from [weirdseed/Vits-Android-ncnn](https://github.com/weir
     ```
     After compilation, you can find `vits-cli` in the build directory.  
 
-3. Run the demo 🚀
+3. 🚀 Run the demo
 
     In the directory where `vits-cli` is located, prepare the dependencies required for running:  
     
     a. Download the [openjtalk dictionary file](https://sourceforge.net/projects/open-jtalk/files/Dictionary/open_jtalk_dic-1.11/open_jtalk_dic_utf_8-1.11.tar.gz/download) and unzip it;  
-    b. Download the [VITS ncnn model](https://github.com/weirdseed/Vits-Android-ncnn/releases/download/v1.2.1/models.zip), unzip the Atri part to the `atri/` directory;  
+    b. Download the [VITS ncnn model](https://github.com/weirdseed/Vits-Android-ncnn/releases/download/v1.2.1/models.zip), unzip the Atri part to the `atri/` directory (for testing the monophonic model), and extract `365_epochs` to the `365_epochs/` directory (for testing the multi-tone model).  
     c. Download the [VITS ncnn params](https://github.com/weirdseed/Vits-Android-ncnn/tree/master/app/src/main/assets) (`single`/`multi` directories).
 
     At this time, the directory has:
     ```
     build
     ├─vits-cli
+    ├─365_epochs
     ├─atri
     ├─multi
     ├─open_jtalk_dic_utf_8-1.11
@@ -64,6 +65,6 @@ The project is forked from [weirdseed/Vits-Android-ncnn](https://github.com/weir
 
 ### 📝 TODO 
  - [x] Support for Japanese monophonic model
- - [ ] Support for Japanese multi-tone model
+ - [x] Support for Japanese multi-tone model
  - [ ] Support for Chinese monophonic model
  - [ ] Support for Chinese multi-tone model
